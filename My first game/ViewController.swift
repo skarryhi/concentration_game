@@ -17,19 +17,31 @@ class ViewController: UIViewController {
     
     private(set) var touches = 0 {
         didSet{
-            touchLable.text = "Touches: \(touches)"
+            updateTouches()
         }
+    }
+    
+    private func updateTouches() {
+        let attributes: [NSAttributedString.Key: Any] = [
+            .strokeWidth: 5.0,
+            .strokeColor: UIColor.black
+        ]
+        let attributedString = NSAttributedString(string: "Touches: \(touches)", attributes: attributes)
+        touchLable.attributedText = attributedString
     }
     
 
     
-    private var emojiCollection = ["🛵", "🚒", "🛺", "🚑", "🚕", "🚓", "🏎", "🛻", "🚀", "✈️", "⛵️", "🚂"]
+//    private var emojiCollection = ["🛵", "🚒", "🛺", "🚑", "🚕", "🚓", "🏎", "🛻", "🚀", "✈️", "⛵️", "🚂"]
+    
+    private var emojiCollection = "🛵🚒🛺🚑🚕🚓🏎🛻🚀✈️⛵️🚂"
     
     private var emojiDictionary = [Card:String]()
     
     private func emojiIdentifire(for card: Card) -> String {
         if emojiDictionary[card] == nil {
-            emojiDictionary[card] = emojiCollection.remove(at: emojiCollection.count.arg4randomExtation)
+            let randomStringIndex = emojiCollection.index(emojiCollection.startIndex, offsetBy: emojiCollection.count.arg4randomExtation)
+            emojiDictionary[card] = String(emojiCollection.remove(at: randomStringIndex))
         }
         return emojiDictionary[card] ?? "?"
     }
@@ -49,7 +61,11 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet private var buttonCollection: [UIButton]!
-    @IBOutlet private weak var touchLable: UILabel!
+    @IBOutlet private weak var touchLable: UILabel! {
+        didSet {
+            updateTouches()
+        }
+    }
     @IBAction private func buttonAction(_ sender: UIButton) {
         touches += 1
         if let buttonIndex = buttonCollection.firstIndex(of: sender) {
