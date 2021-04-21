@@ -13,6 +13,8 @@
 		68B752BC2616507300F1942F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B752BA2616507300F1942F /* Main.storyboard */; };
 		68B752BE2616507600F1942F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B752BD2616507600F1942F /* Assets.xcassets */; };
 		68B752C12616507600F1942F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68B752BF2616507600F1942F /* LaunchScreen.storyboard */; };
+		68B752CB261665D000F1942F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B752CA261665D000F1942F /* Card.swift */; };
+		68B752CE2616663500F1942F /* ConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B752CD2616663500F1942F /* ConcentrationGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		68B752BD2616507600F1942F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68B752C02616507600F1942F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68B752C22616507600F1942F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68B752CA261665D000F1942F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		68B752CD2616663500F1942F /* ConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,9 @@
 				68B752B42616507300F1942F /* AppDelegate.swift */,
 				68B752B62616507300F1942F /* SceneDelegate.swift */,
 				68B752B82616507300F1942F /* ViewController.swift */,
+				68B752CD2616663500F1942F /* ConcentrationGame.swift */,
 				68B752BA2616507300F1942F /* Main.storyboard */,
+				68B752CA261665D000F1942F /* Card.swift */,
 				68B752BD2616507600F1942F /* Assets.xcassets */,
 				68B752BF2616507600F1942F /* LaunchScreen.storyboard */,
 				68B752C22616507600F1942F /* Info.plist */,
@@ -139,7 +145,9 @@
 			files = (
 				68B752B92616507300F1942F /* ViewController.swift in Sources */,
 				68B752B52616507300F1942F /* AppDelegate.swift in Sources */,
+				68B752CE2616663500F1942F /* ConcentrationGame.swift in Sources */,
 				68B752B72616507300F1942F /* SceneDelegate.swift in Sources */,
+				68B752CB261665D000F1942F /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "My first game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,6 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "My first game/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
